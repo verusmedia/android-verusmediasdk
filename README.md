@@ -16,7 +16,7 @@
 •	Download aar lib from latest release. 
 •	In Android studio: File -> New -> New Module and choose Import .jar/.aar Package, press next
 •	File name: path to aar
-•	File -> Project Structure -> {your_module_tab} -> dependencies and add just imported module as dependency.
+•	File -> Project Structure -> {your_module_tab} -> dependencies and add imported module as dependency.
 •	Change your minSdkVersion to >=21 in the Module:app Gradle.
 •	Add the jitpack repository to the Project Gradle.
 ```
@@ -57,8 +57,7 @@ dependencies{
 ```
 <a name="video"></a>
 ### How to get Video Ads
-For getting video ads you need initialize the `Video` class with your `Context`.
-To get the Video Ad you need to call the loadVideoAd function and send your placementId,your `VideoOnLoadListener` and a verified flag, the last will determine wether we show a VeriView Video Ad or a regular Video Ad.
+For getting video ads you need initialize the `Video` class with your `Context`, call the `loadVideoAd()` function and send your placementId, your `VideoOnLoadListener` and a verified flag, the last will determine wether we show a VeriView Video Ad or a regular Video Ad.
 
 The `VideoOnLoadListener` has two methods that will be called to get an status when the Ad finishes.
 The status types are:
@@ -71,7 +70,7 @@ Here is an example on how to get a Video Ad:
 
 ```java
     Video video = new Video(Context);
-        video.loadVideoAd("YourPlacementId", new VideoOnLoadListener() {
+    video.loadVideoAd("YourPlacementId", new VideoOnLoadListener() {
             @Override
             public void onSuccess(VideoState videoState) {
                   //Do something.
@@ -81,7 +80,7 @@ Here is an example on how to get a Video Ad:
             public void onFailure(VideoState videoState) {
                   //Do something when the it fails.   
             }
-        },flag);
+     },flag);
 ```
 You can create a new `VideoOnLoadListener` inside the method call or use your `Activity` class as the listener.
 
@@ -90,10 +89,10 @@ You can create a new `VideoOnLoadListener` inside the method call or use your `A
 For getting native ads you need to initialize the `Native` class with your `Context`. After, you need set your views using the following methods:
 
 ```java
-        setTitleView(TextView titleView);
-        setDescriptionView(TextViewdescView);
-        setImageView(ImageView imageView);
-        setCtaView(Button callToActionView);
+      setTitleView(TextView titleView);
+      setDescriptionView(TextViewdescView);
+      setImageView(ImageView imageView);
+      setCtaView(Button callToActionView);
 ```
 
 
@@ -102,12 +101,12 @@ After you instance your Native Ad, you need to call `loadNativeAd()` function wi
 Here is an example on how to get a Native Ad:
 
 ```java
-  Native nat = new Native(Context);
-        nat.setTitleView(titleView);
-        nat.setDescriptionView(descView);
-        nat.setImageView(imageView);
-        nat.setCtaView(cta);
-        nat.loadNativeAd(new NativeOnLoadListener() {
+       Native nat = new Native(Context);
+       nat.setTitleView(titleView);
+       nat.setDescriptionView(descView);
+       nat.setImageView(imageView);
+       nat.setCtaView(cta);
+       nat.loadNativeAd(new NativeOnLoadListener() {
             @Override
             public void onSuccess() {
                   //Do something.
@@ -117,14 +116,14 @@ Here is an example on how to get a Native Ad:
             public void onFailure() {
                 //Do something when the it fails.
             }
-        },"YourPlacementId");
+       },"YourPlacementId");
 ```
 You can create a new `NativeOnLoadListener` inside the method call or use your `Activity` class as the listener.
 <a name="banner"></a>
 ### How to get Banner Ads
 For getting Banner Ads you need to create a Banner in your view.xml
 ```xml
-            <com.verusmedia.sdk.Banner.Banner
+        <com.verusmedia.sdk.Banner.Banner
             android:id="@+id/banner"
             android:layout_width="YourWidth"
             android:layout_height="YourHeight"/>           
@@ -134,8 +133,8 @@ You need to call your Banner view in your class and call the `loadNativeAd()` wi
 
 Here is an example on how to get a Banner Ad:
 ```java
-Banner banner = (Banner) findViewById(R.id.banner);
-banner.loadBannerAd(YourWidth, YourHeight, "YourPlacementId", new BannerOnLoadListener() {
+        Banner banner = (Banner) findViewById(R.id.banner);
+        banner.loadBannerAd(YourWidth, YourHeight, "YourPlacementId", new BannerOnLoadListener() {
             @Override
             public void onSuccess() {
                 //Do something.
@@ -145,6 +144,6 @@ banner.loadBannerAd(YourWidth, YourHeight, "YourPlacementId", new BannerOnLoadLi
             public void onFailure() {
                 //Do something when the it fails.
             }
-});
+        });
 ```
         
