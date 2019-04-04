@@ -57,14 +57,12 @@ dependencies{
 ```
 <a name="video"></a>
 ### How to get Video Ads
-For getting video ads you need initialize the `Video` class with your `Context`, call the `loadVideoAd()` function and send your placementId, your `VideoOnLoadListener` and a verified flag, the last will determine wether we show a VeriView Video Ad or a regular Video Ad.
+To get a video ad you need initialize the `Video` class with your `Context`, call the `loadVideoAd()` function and send your placementId, your `VideoOnLoadListener` and a verified flag, the last will determine wether we show a VeriView™ Video Ad or a regular Video Ad.
 
-The `VideoOnLoadListener` has two methods that will be called to get an status when the Ad finishes.
-The status types are:
+The `VideoOnLoadListener` has two methods that will be called with a `VideoStatus` when the Ad finishes.
+The `VideoStatus` enumeration types are:
 
 `COMPLETED`, `COMPLETED_VERIFIED`, `AD_ERROR_RS` and `NO_INTERNET`
-
-Which are in `VideoStatus` enum.
 
 Here is an example on how to get a Video Ad:
 
@@ -86,7 +84,7 @@ You can create a new `VideoOnLoadListener` inside the method call or use your `A
 
 <a name="native"></a>
 ### How to get Native Ads
-For getting native ads you need to initialize the `Native` class with your `Context`. After, you need set your views using the following methods:
+To get a native ad you need to initialize the `Native` class with your `Context`. After, you need set your views using the following methods:
 
 ```java
       setTitleView(TextView titleView);
