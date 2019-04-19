@@ -57,7 +57,7 @@ dependencies{
 ```
 <a name="video"></a>
 ### How to get Video Ads
-To get a video ad you need initialize the `Video` class with your `Context`, call the `loadVideoAd()` function and send your placementId, your `VideoOnLoadListener` and a verified flag, the last will determine wether we show a VeriView™ Video Ad or a regular Video Ad.
+To get a video ad you need initialize the `Video` class with your `Context`, call the `loadVideoAd()` function and send your placementId, `VideoOnLoadListener`, and a verified flag. The verified flag is used determine whether we show a VeriView™ Video Ad or a regular Video Ad.
 
 The `VideoOnLoadListener` has two methods that will be called with a `VideoStatus` when the Ad finishes.
 The `VideoStatus` enumeration types are:
