@@ -50,7 +50,6 @@ dependencies{
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
     implementation 'com.android.volley:volley:1.1.1'
-    implementation 'com.github.vic797:prowebview:2.2.1'
     ...
 }
 
