@@ -82,7 +82,7 @@ You can create a new `VideoOnLoadListener` inside the method call or use your `A
 
 <a name="native"></a>
 ### How to get Native Ads
-To get a native ad you need to initialize the `Native` class with your `Context`. After, you need set your views using the following methods:
+To get a native ad you need to initialize the `Native` class with your `Context`. After, you need set your views using the following methods:
 
 ```java
       setTitleView(TextView titleView);
