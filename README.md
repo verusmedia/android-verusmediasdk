@@ -1,4 +1,4 @@
-# VerusMedia-SDK
+# Android-VerusMedia-SDK
 ##### Requirements:
 
 * Java JDK 8
