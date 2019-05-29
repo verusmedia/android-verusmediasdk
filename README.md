@@ -1,4 +1,4 @@
-# Verusmediaads-SDK
+# VerusMedia-SDK
 ##### Requirements:
 
 * Java JDK 8
