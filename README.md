@@ -13,11 +13,8 @@
 
 <a name="ins"></a>
 ## Installation
-•	Download aar lib from latest release. 
-•	In Android studio: File -> New -> New Module and choose Import .jar/.aar Package, press next
-•	File name: path to aar
-•	File -> Project Structure -> {your_module_tab} -> dependencies and add imported module as dependency.
 •	Change your minSdkVersion to >=21 in the Module:app Gradle.
+
 •	Add the jitpack repository to the Project Gradle.
 ```
 allprojects {
@@ -38,18 +35,20 @@ Android{
     }
     ...
 }
+```
+•	Add the verusmediaads and android dependencies to your gradle.
 
-
+```
 dependencies{
     ...
-     final SUPPORT_LIBRARY_VERSION = '28.0.0'
+    //Android core dependencies
+    final SUPPORT_LIBRARY_VERSION = '28.0.0'
     implementation "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
     implementation "com.android.support:support-v13:$SUPPORT_LIBRARY_VERSION"
     implementation "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
-    implementation 'com.android.volley:volley:1.1.1'
+    //Verusmediaads-sdk dependency
+    implementation 'com.gitlab.jinglz.apps:android-verusmediaads-sdk:1.0.4-beta'
     ...
 }
 
