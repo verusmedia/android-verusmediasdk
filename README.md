@@ -48,7 +48,7 @@ dependencies{
     implementation "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     //Verusmediaads-sdk dependency
-    implementation 'com.gitlab.jinglz.apps:android-verusmediaads-sdk:1.0.9-beta'
+    implementation 'com.gitlab.jinglz.apps:android-verusmediaads-sdk:1.0.10-beta'
     ...
 }
 
